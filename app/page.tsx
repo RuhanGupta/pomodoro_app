@@ -61,11 +61,7 @@ export default function Page() {
   ]);
 
   // keep remaining in sync when settings or mode change (if not running)
-  useEffect(() => {
-    if (!isRunning) {
-      setRemaining(totalSecondsForMode);
-    }
-  }, [totalSecondsForMode, isRunning]);
+
 
   const minutes = useMemo(
     () => Math.floor(remaining / 60)
